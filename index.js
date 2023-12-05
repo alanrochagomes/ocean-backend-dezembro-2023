@@ -1,7 +1,7 @@
 const express = require('express')
 const { MongoClient, ObjectId } = require('mongodb')
 
-const dbUrl = "mongodb+srv://admin:kB3fpI302iKSEXMY@cluster0.djun06g.mongodb.net"
+const dbUrl = "mongodb+srv://admin:xcI9XL6FHxF5j4Hh@alan.3nhkyac.mongodb.net/?retryWrites=true&w=majority"
 const client = new MongoClient(dbUrl)
 const dbName = "ocean-backend-dezembro-2023"
 
@@ -97,7 +97,7 @@ async function main() {
     res.send("Item removido com sucesso!")
   })
 
-  app.listen(3000)
+  app.listen(process.env.PORT || 3000)
 }
 
 main()
